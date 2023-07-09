@@ -19,3 +19,11 @@ export function calcMinutesLeft(dateStr) {
   const d2 = new Date(dateStr).getTime();
   return Math.round((d2 - d1) / 60000);
 }
+
+export function formatName(name) {
+  const nameArray = name.toLowerCase().split(" ");
+
+  return nameArray
+    .map((name) => `${name.charAt(0).toUpperCase()}${name.slice(1)}`)
+    .join(" ");
+}
